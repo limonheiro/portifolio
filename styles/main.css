@@ -1,0 +1,24 @@
+h1{
+    color: var(--primary-color);
+    font-family: 'Inter';
+    font-weight: 700;
+    font-size: 3rem;
+}
+
+.texto_sobre{
+    color: var(--primary-color);
+    font-family: 'Inter';
+    width: 450px;
+}
+
+.main__container{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    justify-self: center;
+}
+.main_sobre{
+    display: flex;
+    flex-direction: column;
+    padding-top: 2rem;
+}

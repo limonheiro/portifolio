@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Ingrid+Darling&display=swap');
+
+@font-face {
+    font-family: "Ingrid Darling";
+    src:
+        local("Ingrid Darling"),
+        url("../fonts/IngridDarling-Regular.ttf")
+}
+@font-face {
+    font-family: "Inter";
+    src: url("../fonts/Inter.ttf");
+}
+@font-face {
+    font-family: "Karma";
+    src: url("../fonts/Karma-Regular.ttf");
+}
+
+:root {
+    --primary-color: #003C43;
+    --bg-color: #F5F5F5;
+    --bg-button: #fff;
+}
+
+body { 
+    background: var(--bg-color);
+}
+
+.nav__container{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: space-around;
+    color: var(--primary-color);
+    gap: 10rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+.home {
+    font-family: "Ingrid Darling";
+    font-style: normal;
+    font-size: 2.5rem;
+}
+
+.ul_container{
+    display: flex;
+    gap: 1rem;
+}
+
+.nav__link {
+
+    font-family: "Karma";
+    color: var(--primary-color);
+    font-size: 1rem;
+}
