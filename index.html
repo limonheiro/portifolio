@@ -8,15 +8,18 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ingrid+Darling&display=swap" rel="stylesheet">
-    
+
     <link rel="stylesheet" href="styles/header.css">
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/media.css">
+    <script src="assets/fontawesome-free-6.5.2-web/js/all.js" defer></script>
     <title>Portifolio</title>
 </head>
 
 <body>
     <nav class="nav__container">
         <a class="home">N</a>
+        <i class="fa-solid fa-burger nav__bt"></i>
         <ul class="ul_container">
             <li><a class="nav__link" href="#Habilidades">Habilidades</a></li>
             <li><a class="nav__link" href="#Projetos">Projetos</a></li>
@@ -30,26 +33,167 @@
                 Nicolas Timoteu
             </h1>
             <p class="texto_sobre">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, tempora labore doloremque sequi voluptatibus sint nemo asperiores quae facilis, corporis vero excepturi iste fugit animi saepe dolor reprehenderit placeat non?
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, tempora labore doloremque sequi
+                voluptatibus sint nemo asperiores quae facilis, corporis vero excepturi iste fugit animi saepe dolor
+                reprehenderit placeat non?
             </p>
+            <div class="redes">
+                <a href=""><i class="fa-brands fa-linkedin rede-icon"></i></a>
+                <a href=""><i class="fa-brands fa-github rede-icon"></i></a>
+            </div>
         </div>
         <div class="habilidades">
             <h1>Habilidades</h1>
-            <button>
-                <i class="icone_habilidade"></i>
-                <p class="habilidade_tipo">Python</p>
-            </button>
+            <div class="habilidades__container">
+                <div class="card__habilidade">
+                    <i class="fa-brands fa-python icon"></i>
+                    <p class="habilidade_tipo">Python</p>
+                </div>
+                <div class="card__habilidade">
+                    <i class="fa-brands fa-css3-alt icon"></i>
+                    <p class="habilidade_tipo">CSS</p>
+                </div>
+                <div class="card__habilidade">
+                    <i class="fa-brands fa-html5 icon"></i>
+                    <p class="habilidade_tipo">HTML</p>
+                </div>
+                <div class="card__habilidade">
+                    <i class="fa-brands fa-js icon"></i>
+                    <p class="habilidade_tipo">Javascript</p>
+                </div>
+                <div class="card__habilidade">
+                    <i class="fa-brands fa-git-alt icon"></i>
+                    <p class="habilidade_tipo">Git</p>
+                </div>
+                <div class="card__habilidade">
+                    <i class="fa-brands fa-linux icon"></i>
+                    <p class="habilidade_tipo">Linux</p>
+                </div>
+                <div class="card__habilidade">
+                    <i class="fa-solid fa-c icon"></i>
+                    <p class="habilidade_tipo">C</p>
+                </div>
+                <div class="card__habilidade">
+                    <i class="fa-brands fa-docker icon"></i>
+                    <p class="habilidade_tipo">Docker</p>
+                </div>
+                <div class="card__habilidade">
+                    <i class="fa-brands fa-php icon"></i>
+                    <p class="habilidade_tipo">PHP</p>
+                </div>
+                <div class="card__habilidade">
+                    <i class="fa-solid fa-terminal icon"></i>
+                    <p class="habilidade_tipo">Shell</p>
+                </div>
+                <div class="card__habilidade">
+                    <i class="fa-brands fa-aws icon"></i>
+                    <p class="habilidade_tipo">AWS</p>
+                </div>
+            </div>
+
         </div>
         <div class="projetos">
             <h1>Projetos</h1>
-            <div class="projeto">
-                
+            <div class="projetos">
+                <div class="projetos__container">
+                    <div class="projeto">
+                        <img class="image_projeto" src="assets/imagens/decodificador.webp"
+                            alt="imagem da tela do decodificador">
+                        <div class="descricao">
+                            <p class="texto__descrição">Aplicação de criptografia de texto usando regras definidas, com
+                                opção de cópia e responsivo.</p>
+                            <div class="descricao_habilidades">
+                                <i class="fa-brands fa-js desc"></i>
+                                <i class="fa-brands fa-css3-alt desc"></i>
+                                <i class="fa-brands fa-html5 desc"></i>
+                            </div>
+                            <div class="codigo__fonte">
+                                <a
+                                    href="https://github.com/limonheiro/Challenge-ONE-Logica-de-Programacao-Decodificador-de-Texto">Código-fonte</a>
+                                <a
+                                    href="https://limonheiro.github.io/Challenge-ONE-Logica-de-Programacao-Decodificador-de-Texto/">Site</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="projeto">
+                        <img class="image_projeto" src="assets/imagens/hyper.webp" alt="imagem da tela do web-site">
+                        <div class="descricao">
+                            <p class="texto__descrição">Página inspirada em foto do Pinterest</p>
+                            <div class="descricao_habilidades">
+                                <i class="fa-brands fa-css3-alt desc"></i>
+                                <i class="fa-brands fa-html5 desc"></i>
+                            </div>
+                            <div class="codigo__fonte">
+                                <a href="https://github.com/limonheiro/new-jeans">Código-fonte</a>
+                                <a href="https://new-jeans-eight.vercel.app/">Site</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="projeto">
+                        <img class="image_projeto" src="assets/imagens/Yu-Gi.webp"
+                            alt="Imagem da tela do Jogo Yu-Gi-OH">
+                        <div class="descricao">
+                            <p class="texto__descrição">Jogo de Pedra, Papel e Tesoura. Com o estilo de jogo do
+                                Card-Game Yu-Gi-OH</p>
+                            <div class="descricao_habilidades">
+                                <i class="fa-brands fa-js desc"></i>
+                                <i class="fa-brands fa-css3-alt desc"></i>
+                                <i class="fa-brands fa-html5 desc"></i>
+                            </div>
+                            <div class="codigo__fonte">
+                                <a href="https://github.com/limonheiro/yu-gi-oh-dio">Código-fonte</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="projeto">
+                        <img class="image_projeto" src="assets/imagens/Yolo.webp" alt="Pagina do Detector de Objetos">
+                        <div class="descricao">
+                            <p class="texto__descrição">Implementação de reconhecimento de logotipos do IFMT com YOLOv8,
+                                incluindo criação do banco de imagens, treinamento de modelos e desenvolvimento de API.
+                            </p>
+                            <div class="descricao_habilidades">
+                                <i class="fa-brands fa-python desc"></i>
+                            </div>
+                            <div class="codigo__fonte">
+                                <a href="https://github.com/limonheiro/-ifmt-uniforme-yolov8/tree/main">Código-fonte</a>
+                                <a
+                                    href="https://docs.google.com/document/d/1aU-CHK_hAd1mqIBMwVdmRlnpEYyb8DvSoNzmX-ePMOs/edit?usp=sharing">Artigo</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="projeto">
+                        <img class="image_projeto" src="assets/imagens/ocr.webp" alt="Pagina da aplicação de OCR">
+                        <div class="descricao">
+                            <p class="texto__descrição">Aplicação de OCR feito em Python</p>
+                            <div class="descricao_habilidades">
+                                <i class="fa-brands fa-python desc"></i>
+                                <i class="fa-brands fa-docker icon"></i>
+                            </div>
+                            <div class="codigo__fonte">
+                                <a href="https://github.com/limonheiro/OCR_API">Código-fonte</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="projeto">
+                        <img class="image_projeto" src="assets/imagens/compilador.webp"
+                            alt="Trecho de saida do Compilador">
+                        <div class="descricao">
+                            <p class="texto__descrição">Compilador feito com a Linguagem Python</p>
+                            <div class="descricao_habilidades">
+                                <i class="fa-brands fa-python desc"></i>
+                            </div>
+                            <div class="codigo__fonte">
+                                <a href="https://github.com/limonheiro/Compilador">Código-fonte</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="contato">
             <h1>Contato</h1>
         </div>
-            
+
     </div>
 </body>
 

@@ -1,24 +1,153 @@
-h1{
+h1 {
     color: var(--primary-color);
     font-family: 'Inter';
     font-weight: 700;
     font-size: 3rem;
+    padding-bottom: 0.5rem;
 }
 
-.texto_sobre{
+.texto_sobre {
+    display: flex;
+    
     color: var(--primary-color);
     font-family: 'Inter';
     width: 450px;
 }
 
-.main__container{
+.main__container {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
     justify-self: center;
 }
-.main_sobre{
+
+.main_sobre {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     padding-top: 2rem;
+}
+
+.redes {
+    padding-top: 0.5rem;
+
+}
+
+.rede-icon {
+    height: 32px;
+    width: 32px;
+    color: var(--primary-color);
+}
+
+.habilidades,
+.projetos {
+    display: flex;
+    flex-direction: column;
+}
+
+.habilidades__container {
+    overflow: auto;
+    scrollbar-width: thin;
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    gap: 1rem;
+}
+
+.card__habilidade {
+    color: var(--primary-color);
+    min-width: 65px;
+    min-height: 65px;
+    font-family: 'Inter';
+    background: var(--bg-button);
+    padding-top: 0.5rem;
+    padding-left: 0.5rem;
+    border-radius: 4px;
+}
+
+.habilidade_tipo {
+    font-size: 0.625rem;
+    margin-bottom: 5px;
+}
+
+.icon {
+    height: 32px;
+    padding-bottom: 0.5rem;
+
+}
+
+.image_projeto {
+    width: 300px;
+    height: 300px;
+}
+
+.projetos__container {
+    scrollbar-width: thin;
+    /* overflow: none; */
+    overflow-y: hidden;
+    display: flex;
+    gap: 1rem;
+    width: 80%;
+}
+
+.projeto {
+    position: relative;
+    display: inline-block;
+    padding-top: 0.5rem;
+    width: 300px;
+    height: 300px;
+    padding-bottom: 0.2rem;
+}
+
+.descricao {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(249, 249, 249, 0.911);
+    color: var(--primary-color);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    width: 100%;
+    height: 50%;
+}
+
+.texto__descrição {
+    font-family: 'Inter';
+    padding: 0.5rem;
+    font-size: 0.89rem;
+    line-height: 1.25;
+    text-align: justify;
+    font-weight: 500;
+    flex-grow: 2;
+}
+
+.descricao_habilidades {
+    display: flex;
+    padding-left: 0.5rem;
+    gap: 0.5rem;
+}
+
+.desc {
+    width: 30px;
+    height: 30px;
+}
+
+.codigo__fonte a {
+    font-family: 'Inter';
+    padding-left: 0.5rem;
+    text-decoration: none;
+    color: var(--primary-color);
+
+}
+
+.codigo__fonte {
+    padding-bottom: 0.5rem;
+}
+
+.projeto:hover .descricao {
+    opacity: 1;
 }

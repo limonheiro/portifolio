@@ -1,0 +1,131 @@
+@media screen and (max-width: 600px) {
+    body{
+        padding-left: 5%;
+    }
+
+    .home{
+        display: block;
+        padding-left: 0 !important;
+    }
+
+    .ul_container{
+        display: none;
+    }
+
+    .nav__bt{
+        display: block;
+        height: 2rem;
+        cursor: pointer;
+        padding-right: 1rem;
+    }
+
+    .texto_sobre{
+        max-height: max-content;
+        max-width: max-content;
+        inline-size: 350px;
+        overflow-wrap: break-word;
+    }
+
+    .projetos__container{
+        gap:0.5rem;
+        padding-bottom: 0px !important;
+    }
+
+    .projeto .image_projeto {
+        max-width: 250px;
+        max-height: 250px;
+        padding-bottom: 0rem !important;
+    }
+
+    .projeto{
+        padding-bottom: 0px !important;
+    }
+
+    .descricao {
+        bottom: 15%;
+        left: 50%;
+        width: 100%;
+        height: 50%;
+    }
+
+    .texto__descrição {
+        font-size: 0.8rem;
+    }
+
+}
+
+
+@media screen and  (max-width: 700px) {
+    body{
+        width: 100svw;
+    }
+
+    .texto_sobre{
+        text-wrap: wrap;
+    }
+    .home{
+        padding-left: 10%;
+    }
+
+    .ul_container{
+        padding-right: 20%;
+    }
+
+    /* .nav__bt{
+        display: block;
+        height: 2rem;
+        cursor: pointer;
+        padding-right: 1rem;
+    } */
+
+    .ul_container {
+        flex-grow: 1;
+    }
+    .home{
+        flex-grow: 1;
+        flex-shrink: 0;
+    }
+}
+
+@media screen and  (max-width: 810px) {
+    body { 
+        max-width: 90%;
+        padding-left: 10%;
+    }
+
+    .nav__container{
+        /* gap: 0.2rem; */
+        justify-content: space-between;
+    }
+
+    .ul_container {
+        flex-grow: 2;
+    }
+    .home{
+        flex-grow: 1;
+        flex-shrink: 2;
+    }
+
+    .habilidades__container{
+        width: 80%;
+        flex-wrap: wrap;
+    }
+
+
+
+    .projeto .descricao {
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 1020px) {
+    body { 
+        padding-left: 10%;
+        /* padding-right: 10%; */
+    }
+
+    .nav__container{
+        justify-content: space-around;
+    }
+}
+
