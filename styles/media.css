@@ -1,4 +1,4 @@
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 630px) {
     body{
         padding-left: 5%;
     }
@@ -14,9 +14,11 @@
 
     .nav__bt{
         display: block;
+        position: absolute;
+        left: 80%;
         height: 2rem;
         cursor: pointer;
-        padding-right: 1rem;
+        padding-right: 0 !important;
     }
 
     .texto_sobre{
@@ -29,6 +31,7 @@
     .projetos__container{
         gap:0.5rem;
         padding-bottom: 0px !important;
+        height: 255px;
     }
 
     .projeto .image_projeto {
