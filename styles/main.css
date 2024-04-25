@@ -1,3 +1,8 @@
+*{
+    color: var(--primary-color);
+    font-family: 'Inter';
+}
+
 h1 {
     color: var(--primary-color);
     font-family: 'Inter';
@@ -23,6 +28,7 @@ h1 {
 .cv{
     background: var(--primary-color);
     color: var(--bg-button);
+    font-family: 'Inter';
     padding: 0.5rem;
     border-radius: 4px;
 }
@@ -54,7 +60,8 @@ h1 {
 }
 
 .habilidades,
-.projetos {
+.projetos,
+formacoes {
     display: flex;
     flex-direction: column;
 }

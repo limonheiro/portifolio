@@ -13,13 +13,16 @@
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/media.css">
     <link rel="stylesheet" href="styles/footer.css">
+    <link rel="stylesheet" href="styles/formacao.css">
+    <link rel="stylesheet" href="styles/formulario.css">
     <script src="assets/fontawesome-free-6.5.2-web/js/all.js" defer></script>
+    <script src="js/script.js" defer></script>
     <title>Portifolio</title>
 </head>
 
 <body>
     <nav class="nav__container">
-        <a class="home">N</a>
+        <a href="#Topo" class="home">N</a>
         <i class="fa-solid fa-burger nav__bt"></i>
         <ul class="ul_container">
             <li><a class="nav__link" href="#Habilidades">Habilidades</a></li>
@@ -29,26 +32,33 @@
     </nav>
 
     <div class="main__container">
-        <div class="main_sobre">
+        <div id="Topo" class="main_sobre">
             <h1>
                 Nicolas Timoteu
             </h1>
             <div class="sobre_container">
                 <p class="texto_sobre">
-                    Formado em Engenharia da Computação, possuo habilidades versáteis em Python, JavaScript, CSS, HTML e reconhecimento de objetos. Com conhecimento sólido em linguagens de programação e uma paixão pela inovação, estou pronto para enfrentar desafios no desenvolvimento de software e web.
+                    Formado em Engenharia da Computação, possuo habilidades versáteis em Python, JavaScript, CSS, HTML e
+                    reconhecimento de objetos. Com conhecimento sólido em linguagens de programação e uma paixão pela
+                    inovação, estou pronto para enfrentar desafios no desenvolvimento de software e web.
                 </p>
                 <p class="texto_sobre">
-                    Estou em busca de oportunidades para colaborar, onde posso aplicar minhas habilidades técnicas e continuar aprendendo e crescendo profissionalmente. Com uma mentalidade ágil e uma abordagem orientada para soluções, estou preparado para enfrentar os desafios do mundo digital em constante evolução. Sou motivado, adaptável e estou pronto para me dedicar a oportunidades que me permitam aplicar e expandir minhas habilidades em um ambiente estimulante e colaborativo.
+                    Estou em busca de oportunidades para colaborar, onde posso aplicar minhas habilidades técnicas e
+                    continuar aprendendo e crescendo profissionalmente. Com uma mentalidade ágil e uma abordagem
+                    orientada para soluções, estou preparado para enfrentar os desafios do mundo digital em constante
+                    evolução. Sou motivado, adaptável e estou pronto para me dedicar a oportunidades que me permitam
+                    aplicar e expandir minhas habilidades em um ambiente estimulante e colaborativo.
                 </p>
                 <div class="redes">
-                    <a href=""><i class="fa-brands fa-linkedin rede-icon"></i></a>
-                    <a href=""><i class="fa-brands fa-github rede-icon"></i></a>
-                    <a class="cv" href="assets/doc/Nícolas Curriculo.pdf"  target="_blank">Currículo</a>
+                    <a href="https://www.linkedin.com/in/nicolas-timoteu/"><i
+                            class="fa-brands fa-linkedin rede-icon"></i></a>
+                    <a href="https://github.com/limonheiro"><i class="fa-brands fa-github rede-icon"></i></a>
+                    <a class="cv" href="assets/doc/Nícolas Curriculo.pdf" target="_blank">Currículo</a>
                 </div>
             </div>
-            
+
         </div>
-        <div class="habilidades">
+        <div id="Habilidades" class="habilidades">
             <h1>Habilidades</h1>
             <div class="habilidades__container">
                 <div class="card__habilidade">
@@ -98,7 +108,31 @@
             </div>
 
         </div>
-        <div class="projetos">
+        <div id="Formacao">
+            <h1>Formação e Certificação</h1>
+            <div class="formacoes">
+                <div class="formacoes__container">
+                    <div class="formacao">
+                        <img src="assets/imagens/logo-ifmt.webp" alt="logo da ifmt">
+                        <div class="formacao__descricao">
+                            <p class="formacao__texto__descrição">Engenharia da computação</p>
+                            <p class="descricao_ano">2023</p>
+                        </div>
+                    </div>
+
+                    <div class="formacao">
+                        <img class="aws" src="assets/imagens/aws.webp" alt="Bagde AWS Certified Cloud Practitioner">
+                        <div class="formacao__descricao">
+                            <p class="formacao__texto__descrição">AWS Certified Cloud Practitioner</p>
+                            <p class="descricao_ano">2023</p>
+                        </div>
+                    </div>
+    
+                </div>
+
+            </div>
+        </div>
+        <div id="Projetos">
             <h1>Projetos</h1>
             <div class="projetos">
                 <div class="projetos__container">
@@ -196,8 +230,42 @@
                 </div>
             </div>
         </div>
-        <div class="contato">
+        <div id="Contato" class="contato">
             <h1>Contato</h1>
+            <div class="formulario">           
+                <form class="formulario_container" action="/" method="post" data-adicionar>
+                    <!-- <label class="campo__etiqueta" for="nome">Nome</label> -->
+                    <div class="campo_escrita">
+                        <label>
+                            <input type="text" name="nome" id="nome" required maxlength="50">
+                            <p>Nome</p>
+                        </label>
+                    </div>
+                   
+                    <div class="campo_escrita">
+                        <label>
+                            <input type="text" name="email" id="email" required maxlength="50">
+                            <p>E-mail</p>
+                        </label>
+                    </div>
+
+                    <div class="campo_escrita">
+                        <label>
+                            <input type="text" name="assunto" id="assunto" required maxlength="50">
+                            <p>Assunto</p>
+                        </label>
+                    </div>
+
+                    <div class="campo_escrita">
+                        <label>
+                            <textarea type="text" name="mensagem" id="mensagem" required ></textarea>
+                            <p>Mensagem</p>
+                        </label>
+                    </div>
+    
+                    <button class="formulario__botao cv" type="submit">Enviar</button>
+                </form>
+            </div>
         </div>
 
     </div>
