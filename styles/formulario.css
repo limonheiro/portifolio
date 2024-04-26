@@ -94,9 +94,9 @@ label textarea:focus {
 
 }
 
-label input:not(:valid) ~ p,
-label textarea:not(:valid) ~ p {
-    color: red;
+label input:user-invalid ~ p,
+label textarea:user-invalid ~ p {
+    color: #ff0000;
     font-weight: 800;
     background-color: var(--bg-color);
   }
@@ -115,4 +115,16 @@ label textarea:not(:valid) ~ p {
     font-family: 'Inter';
     font-weight: 500;
     color: var(--primary-color);
+}
+#signupCaptcha{
+    position: relative;
+    margin-bottom: 0.25rem;
+}
+.mensagem_erro{
+    margin-bottom: 0.5rem;
+}
+.mensagem_erro p{
+    font-size: 1.2rem;
+    color: #ff0000;
+    font-family: 'Inter';
 }
