@@ -14,9 +14,9 @@ formulario.addEventListener('focusout', () => {
 
     var arrayValores = Array.prototype.slice.call(valores);
 
-    if(arrayValores.every(a => a.validity.valid)){
+    if (arrayValores.every(a => a.validity.valid)) {
         signupCaptcha.style.visibility = 'visible'
-    }else{
+    } else {
         signupCaptcha.style.visibility = 'hidden'
     }
 
@@ -38,6 +38,7 @@ camposFormulario.forEach((campo) => {
 })
 
 function verificarCampo(campo) {
+
     let mensagem = ''
     campo.setCustomValidity('')
 
@@ -61,10 +62,10 @@ function verificarCampo(campo) {
 
 async function enviarFormulario() {
 
-    const nome = document.querySelector('#nome').value
-    const email = document.querySelector('#email').value
-    const assunto = document.querySelector('#assunto').value
-    const mensagem = document.querySelector('#mensagem').value
+    let nome = camposFormulario.item(0).value
+    let email = camposFormulario.item(1).value
+    let assunto = camposFormulario.item(2).value
+    let mensagem = camposFormulario.item(3).value
 
     const corpo = {
         "nome": nome,
@@ -74,7 +75,7 @@ async function enviarFormulario() {
     }
 
     await enviandoFormulario(corpo)
-    // window.location.href = '../index.html'
+    window.location.href = '../index.html'
 
 }
 
