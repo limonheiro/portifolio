@@ -22,8 +22,8 @@ formulario.addEventListener('focusout', () => {
 
 })
 
-signupCaptcha.addEventListener('verified', (e) => {
-    enviarFormulario()
+signupCaptcha.addEventListener('verified', async (e) => {
+    await enviarFormulario()
 });
 signupCaptcha.addEventListener('error', (e) => {
     console.log('error event', { error: e.error });
@@ -61,10 +61,10 @@ function verificarCampo(campo) {
 
 async function enviarFormulario() {
 
-    const nome = document.querySelector('#nome')
-    const email = document.querySelector('#email')
-    const assunto = document.querySelector('#assunto')
-    const mensagem = document.querySelector('#mensagem')
+    const nome = document.querySelector('#nome').value
+    const email = document.querySelector('#email').value
+    const assunto = document.querySelector('#assunto').value
+    const mensagem = document.querySelector('#mensagem').value
 
     const corpo = {
         "nome": nome,
@@ -74,7 +74,7 @@ async function enviarFormulario() {
     }
 
     await enviandoFormulario(corpo)
-    window.location.href = '../index.html'
+    // window.location.href = '../index.html'
 
 }
 
