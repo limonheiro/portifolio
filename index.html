@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ingrid+Darling&display=swap" rel="stylesheet">
-    <script src="js/script.js" defer></script>
+    <script src="js/script.js" type="module" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/@hcaptcha/vanilla-hcaptcha" async defer></script>
     <!-- <script src="https://js.hcaptcha.com/1/api.js" async defer></script> -->
 
@@ -243,6 +243,7 @@
                         <label>
                             <input type="text" name="nome" id="nome" required maxlength="50">
                             <p>Nome</p>
+                            <span class="mensagem_erro"></span>
                         </label>
                     </div>
 
@@ -250,6 +251,7 @@
                         <label>
                             <input type="email" name="email" id="email" required maxlength="50">
                             <p>E-mail</p>
+                            <span class="mensagem_erro"></span>
                         </label>
                     </div>
 
@@ -257,6 +259,7 @@
                         <label>
                             <input type="text" name="assunto" id="assunto" required maxlength="50">
                             <p>Assunto</p>
+                            <span class="mensagem_erro"></span>
                         </label>
                     </div>
 
@@ -264,12 +267,12 @@
                         <label>
                             <textarea type="text" name="mensagem" id="mensagem" required maxlength="300"></textarea>
                             <p>Mensagem</p>
+                            <span class="mensagem_erro"></span>
                         </label>
                     </div>
 
                     <h-captcha id="signupCaptcha" site-key="f6a0666e-4fe0-4d15-b779-3e0e91c21a59" size="normal"
                         tabindex="0" type="submit"></h-captcha>
-                    <span class="mensagem_erro"></span>
                     <!-- <div class="h-captcha" data-sitekey="f6a0666e-4fe0-4d15-b779-3e0e91c21a59"></div> -->
                     <!-- <button class="formulario__botao cv" id="signupCaptcha" site-key="f6a0666e-4fe0-4d15-b779-3e0e91c21a59" type="submit">Enviar</button> -->
 

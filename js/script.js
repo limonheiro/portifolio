@@ -1,21 +1,70 @@
+import { mensagens, tiposErro } from "./mensagens.js";
+
 const formulario = document.querySelector('.formulario_container')
+
 const signupCaptcha = document.getElementById('signupCaptcha');
+signupCaptcha.style.visibility = 'hidden'
+
+let camposFormulario = document.querySelectorAll('[required]')
+
+
+formulario.addEventListener('focusout', () => {
+
+    const valores = formulario.querySelectorAll('input, textarea')
+
+    var arrayValores = Array.prototype.slice.call(valores);
+
+    if(arrayValores.every(a => a.validity.valid)){
+        signupCaptcha.style.visibility = 'visible'
+    }else{
+        signupCaptcha.style.visibility = 'hidden'
+    }
+
+})
 
 signupCaptcha.addEventListener('verified', (e) => {
-    console.log('verified event', { token: e.token })
     enviarFormulario()
 });
 signupCaptcha.addEventListener('error', (e) => {
     console.log('error event', { error: e.error });
 });
 
+camposFormulario.forEach((campo) => {
+    campo.addEventListener('blur', () => verificarCampo(campo))
+    campo.addEventListener('invalid', event => {
+        event.preventDefault()
+    })
+
+})
+
+function verificarCampo(campo) {
+    let mensagem = ''
+    campo.setCustomValidity('')
+
+    tiposErro.forEach(erro => {
+        if (campo.validity[erro]) {
+            mensagem = mensagens[campo.name][erro];
+            console.log(mensagem);
+        }
+    })
+
+    const mensagemErro = campo.parentNode.querySelector('.mensagem_erro');
+    const validadorDeInput = campo.checkValidity();
+
+    if (!validadorDeInput) {
+        mensagemErro.textContent = mensagem;
+
+    } else {
+        mensagemErro.textContent = "";
+    }
+}
+
 async function enviarFormulario() {
 
-    console.log('aa')
-    const nome = document.querySelector('#nome').value
-    const email = document.querySelector('#email').value
-    const assunto = document.querySelector('#assunto').value
-    const mensagem = document.querySelector('#mensagem').value
+    const nome = document.querySelector('#nome')
+    const email = document.querySelector('#email')
+    const assunto = document.querySelector('#assunto')
+    const mensagem = document.querySelector('#mensagem')
 
     const corpo = {
         "nome": nome,
