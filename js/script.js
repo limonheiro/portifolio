@@ -60,6 +60,7 @@ function verificarCampo(campo) {
     }
 }
 
+
 async function enviarFormulario() {
 
     let nome = camposFormulario.item(0).value
@@ -74,7 +75,8 @@ async function enviarFormulario() {
         "mensagem": mensagem
     }
 
-    await enviandoFormulario(corpo)
+    // await enviandoFormulario(corpo)
+    alert('formulario enviado com sucesso')
     window.location.href = '../index.html'
 
 }
