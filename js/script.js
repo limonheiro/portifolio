@@ -76,7 +76,7 @@ async function enviarFormulario() {
     }
 
     // await enviandoFormulario(corpo)
-    alert('formulario enviado com sucesso')
+    alert('formulário enviado com sucesso')
     window.location.href = '../index.html'
 
 }
